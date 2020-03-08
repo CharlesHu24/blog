@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage</title>
+  <link rel="stylesheet" href="../css/layout_manage_index.css"/>
+  <link rel="stylesheet" href="../iconfont/blog/iconfont.css">
+  <link rel="stylesheet" href="../iconfont/blog-edit/iconfont.css">
+</head>
+<!--　　　　　　　　　　　　我你我你　　　　　　　　　　　　　　　　　　我你我你　　我你我你　　　　　　　　　　　　　　　　我你我你我你　　　　　　　　　　　　-->
+<!--　　　　　　　　　　　　我你我你　　　　　　　　　　　　我你我你我你我你我你我你我你我你我你我你我你　　　　　　　　　　我你我你我你　　　　　　　　　　　　-->
+<!--　　　　　　　　　　　　我你我你　　　　　　　　　　　　　　　　　　我你我你　　我你我你　　　　　　　　　　　　　　　　我你我你我你　　　　　　　　　　　　-->
+<!--　　　　　　我你我你　　我你我你　　我你我你　　　　我你我你我你我你我你我你我你我你我你我你我你我你我你　　　　　　　　我你我你我你　　　　　　　　　　　　-->
+<!--　　　　　　我你我你　　我你我你我你我你我你　　　　　　　　　　　　　　我你我你我你　　　　　　　　　　　　　　　　　　我你我你我你　　　　　　　　　　　　-->
+<!--　　　　我你我你我你　　我你我你　　我你我你我你　　　　　　我你我你我你我你我你我你我你我你我你　　　　　　　　　　　　我你我你我你　　　　　　　　　　　　-->
+<!--　　　　我你我你我你　　我你我你　　　　我你我你　　　　　　我你我你我你我你我你我你我你我你我你　　　　　　　　　　我你我你我你我你我你　　　　　　　　　　-->
+<!--　　　　我你我你　　　　我你我你　　　　我你我你我你　　　　我你我你　　我你我你我你　　我你我你　　　　　　　　　　我你我你　　我你我你我你　　　　　　　　-->
+<!--　　我你我你我你　　　　我你我你　　　　　　　　　　　　　　我你我你我你我你我你我你我你我你我你　　　　　　　　我你我你我你　　　　我你我你我你　　　　　　-->
+<!--　　　　　　　　　　　　我你我你　　　　　　　　　　　　　　　　我你我你我你　　我你我你我你我你　　　　　　我你我你我你　　　　　　　　我你我你我你　　　　-->
+<!--　　　　　　　　我你我你我你我你　　　　　　　　　　　　我你我你我你　　　　　　　　　　我你我你我你　　我你我你我你　　　　　　　　　　　　我你我你我你　　-->
+<body>
+<div class="main-canvas">
+  <!--左边导航 S-->
+  <div class="left-sidebar" id="left-sidebar">
+    <div class="sidebar-main-content">
+      <div class="header-info">
+        <img class="header-info-head" src="../img/head2.png"/>
+        <h2 class="header-info-name">小黄人</h2>
+        <p class="header-info-desc">欢迎来到我的个人博客</p>
+      </div>
+      <ul class="left-nav" id="ul1">
+        <li class="left-nav-item left-nav-action">
+          <a href="#" class="left-nav-inner">
+            <i class="iconfont iconarticle-line" aria-hidden="true"></i>
+            文章
+          </a>
+        </li>
+        <li class="left-nav-item">
+          <a href="#" class="left-nav-inner">
+            <i class="iconfont iconfolder" aria-hidden="true"></i>
+            分类
+          </a>
+        </li>
+        <li class="left-nav-item">
+          <a href="#" class="left-nav-inner">
+            <i class="iconfont iconsettings" aria-hidden="true"></i>
+            设置
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="user-exit">
+      <button>退出</button>
+    </div>
+  </div>
+  <!--左边导航 E-->
+
+  <!--上边导航 S-->
+  <div class="top-sidebar">
+    <div class="top-nav">
+      <ul class="top-icon-menu">
+        <li id="control-left-nav">
+          <i class="iconfont iconmenu" aria-hidden="true"></i>
+        </li>
+      </ul>
+
+      <ul class="top-private-menu">
+        <li class="private-menu-item"><a class="private-menu-inner" href="../index.html" target="_blank">博客预览</a></li>
+        <li class="private-menu-item" id="li1">
+          <a class="private-menu-inner open-drop-down" id="oA" href="userInforModify.html" target="_blank">个人中心</a>
+          <!--<div class="drop-down" id="drop-down">-->
+          <!--<a href="#">个人信息</a>-->
+          <!--<a href="#">修改密码</a>-->
+          <!--<a href="#">退出</a>-->
+          <!--</div>-->
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--上边导航 E-->
+
+  <!--主要内容一 S-->
+  <div class="main-container" style="display: block;">
+    <div class="content">
+      <div class="container-title">
+        <ul id="arch-manage-title-ul">
+          <li class="main-container-titel">文章</li>
+        </ul>
+      </div>
+      <!--内容1.1 管理文章 S-->
+      <div class="container-body" style="display: block;" id="manage-container-body1-1">
+        <div class="select-direction">
+          <!--筛选 S-->
+          <div class="left-direction-inner" id="post-left-direction-inner">
+            <a href="javascript:void(0)" class="inner action">全部</a>
+            <a href="javascript:void(0)" class="inner">草稿</a>
+            <a href="javascript:void(0)" class="inner">发布</a>
+            <a href="#" class="inner">回收站</a>
+          </div>
+          <!--筛选 E-->
+
+          <!--搜索 及 创建 S-->
+          <div class="right-direction-item">
+            <div class="search-box" id="post-search-box">
+              <input id="post-search-text" type="text" placeholder="search">
+              <button class="searchbtn" id="post-search-btn">
+                <i class="iconfont iconsearch" aria-hidden="true"></i>
+              </button>
+            </div>
+            <a href="#" class="rel-btn" id="add-post">创建文章</a>
+          </div>
+          <!--搜索 及 创建 E-->
+        </div>
+
+        <!--table S-->
+        <div class="table-responsive">
+          <table class="table" id="post-table">
+            <thead>
+            <tr>
+              <th>文章名</th>
+              <th>状态</th>
+              <th>浏览量</th>
+              <th>更新时间</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody id="post-tbody">
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">文章标题</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-cg">草稿</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block"><img src="../img/head2.png" class="sm-avatar"></a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="../view-post.html" target="_blank"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');">
+                    <i class="iconfont iconicon--" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">222</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-cg">草稿</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">文章标题</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-cg">草稿</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">111</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-fb">发布</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">111</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-fb">发布</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">111</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-fb">发布</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">111</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-fb">发布</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--" aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--table E-->
+      </div>
+      <!--内容1.1 管理文章 E-->
+
+      <!--内容1.2 创建文章 S-->
+      <div class="container-body" id="manage-container-body1-2">
+        <div class="post-func">
+          <select class="select-cate">
+            <option>请选择分类</option>
+            <option value="生活">生活</option>
+            <option value="文学">文学</option>
+          </select>
+          <a href="#" class="del-btn">删除</a>
+          <a href="../view-post.html" class="view-btn" target="_blank">预览</a>
+          <a href="#" class="save-btn">存草稿</a>
+          <a href="#" class="rel-btn">发布</a>
+        </div>
+        <!--文章编辑 S-->
+        <div class="edit-area">
+          <div class="arch-title">
+            <!--<span>标题:</span>-->
+            <input type="text" placeholder="文章标题"/>
+          </div>
+          <div class="arch-desc">
+            <!--<span>描述:</span>-->
+            <input type="text" placeholder="文章描述"/>
+          </div>
+          <div class="arch-main-body">
+            <!--<textarea rows="20" cols="70"></textarea>-->
+            <div class="edit-func">
+              <span class="edit-func-item">
+                <a href="#"><i class="iconfont iconcuti" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconxieti" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconUnderline" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconshanchuxian" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconh1" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconh" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconh2" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconimage" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconyinyong-" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconul" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconol" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconlink" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont icondaima" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont icongongshi" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconvideo" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconfengexian" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconziyuan" aria-hidden="true"></i></a>
+                <a href="#"><i class="iconfont iconziyuan1" aria-hidden="true"></i></a>
+              </span>
+              <span>
+                <a href="#"><i class="iconfont iconweibiaoti10" aria-hidden="true"></i></a>
+              </span>
+            </div>
+            <div class="content-canvas">
+              <div class="content-body">
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+                <p>巴拉巴拉。。</p>
+              </div>
+              <!--<div style="height: 400px;"></div>-->
+            </div>
+          </div>
+        </div>
+        <!--文章编辑 E-->
+      </div>
+      <!--内容1.2 创建文章 E-->
+    </div>
+  </div>
+  <!--主要内容一 E-->
+
+  <!--主要内容二 S-->
+  <div class="main-container">
+    <div class="content">
+      <div class="container-title">
+        <ul id="cate-manage-title-ul">
+          <li class="main-container-titel">分类</li>
+        </ul>
+      </div>
+
+      <!--内容2.1 管理分类 S-->
+      <div class="container-body" id="manage-container-body2-1" style="display: block;">
+        <div class="select-direction">
+          <!--筛选 S-->
+          <div class="left-direction-inner" id="cate-left-direction-inner">
+            <a href="javascript:void(0)" class="inner action">列表</a>
+            <a href="#" class="inner">回收站</a>
+          </div>
+          <!--筛选 E-->
+
+          <!--搜索 及 创建 S-->
+          <div class="right-direction-item">
+            <div class="search-box" id="cate-search-box">
+              <input id="cate-search-text" type="text" placeholder="search">
+              <button class="searchbtn" id="cate-search-btn">
+                <i class="iconfont iconsearch" aria-hidden="true"></i>
+              </button>
+            </div>
+            <a href="#" class="rel-btn" id="add-cate">添加分类</a>
+          </div>
+          <!--搜索 及 创建 E-->
+        </div>
+
+        <!--表格 S-->
+        <div class="table-responsive">
+          <table class="table" id="cate-table">
+            <thead>
+            <tr>
+              <th scope="col">分类名称</th>
+              <th scope="col">文章数量</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody id="cate-tbody">
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconfolder mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">生活</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td>6</td>
+              <td>
+                <div class="edit">
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconfolder mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">前端</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td>6</td>
+              <td>
+                <div class="edit">
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconfolder mr-24"></em>
+                  </a>
+                  <div class="media-body">
+                    <h3 class="media-title">111</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td>6</td>
+              <td>
+                <div class="edit">
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--表格 E-->
+      </div>
+      <!--内容2.1 管理分类 E-->
+
+
+      <!--内容2.2 添加管理 S-->
+      <div class="container-body" id="manage-container-body2-2">
+        <div class="select-direction">
+          <!--筛选 S-->
+          <div class="left-direction-inner">
+          </div>
+          <!--筛选 E-->
+
+          <!--搜索 及 创建 S-->
+          <div class="right-direction-item">
+            <div class="search-box" id="cate-search-box-item">
+              <input id="cate-search-text-item" type="text" placeholder="search">
+              <button class="searchbtn" id="cate-search-btn-item">
+                <i class="iconfont iconsearch" aria-hidden="true"></i>
+              </button>
+            </div>
+            <a href="#" class="del-btn" id="del-cate-post">删除文章</a>
+            <a href="#" class="rel-btn" id="add-cate-post">添加文章</a>
+          </div>
+          <!--搜索 及 创建 E-->
+        </div>
+
+        <div class="edit-cate-info">
+          <em class="iconfont iconfolder"></em>
+          <div>
+            <input class="cate-title" type="text" placeholder="添加标题..." value="默认文件夹"/>
+            <input class="cate-desc" type="text" placeholder="添加描述..." value="简单描述"/>
+          </div>
+        </div>
+
+        <div class="arch-container">
+          <p>目前还没有文章哦</p>
+          <a href="#" class="rel-btn">点我添加文章</a>
+        </div>
+
+
+        <!--table S-->
+        <div class="table-responsive" style="display: none;">
+          <table class="table" id="cate-post-table">
+            <thead>
+            <tr>
+              <th>文章名</th>
+              <th>状态</th>
+              <th>浏览量</th>
+              <th>更新时间</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody id="cate-post-tbody">
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>                  <div class="media-body">
+                    <h3 class="media-title">文章标题</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-cg">草稿</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block"><img src="../img/head2.png" class="sm-avatar"></a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="../view-post.html" target="_blank"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>                  <div class="media-body">
+                    <h3 class="media-title">222</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-cg">草稿</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--" aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>                  <div class="media-body">
+                    <h3 class="media-title">文章标题</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-cg">草稿</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="position-relative">
+                <div class="media">
+                  <a class="stretched-link" href="../view-post.html">
+                    <em class="iconfont iconarticle-line mr-24"></em>
+                  </a>                  <div class="media-body">
+                    <h3 class="media-title">111</h3>
+                    <span class="media-text">— 没有描述</span>
+                  </div>
+                </div>
+              </td>
+              <td class="tanmer-status tanmer-status-fb">发布</td>
+              <td>0</td>
+              <td class="tanmer-white-nowrap">
+                <a class="d-inline-block" data-toggle="tooltip" data-placement="top" title=""
+                   data-original-title="用户0306"><img src="../img/head2.png" class="sm-avatar">
+                </a>
+                <span>2 天前</span>
+              </td>
+              <td>
+                <div class="edit">
+                  <a href="#"><i class="iconfont iconchakan" aria-hidden="true"></i></a>
+                  <a class="delete-post" href="#" onclick="confirm('确定删除吗？');"><i class="iconfont iconicon--"
+                                                                                  aria-hidden="true"></i></a>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--table E-->
+      </div>
+      <!--内容2.2 添加管理 E-->
+    </div>
+  </div>
+  <!--主要内容二 E-->
+</div>
+<script src="../js/manage.js"></script>
+</body>
+</html>
